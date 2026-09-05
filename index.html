@@ -1,18 +1,158 @@
-function filterMenu(cat, btn) {
-    // 1. Tamam tabs se 'active' class hatayein
-    const tabs = document.querySelectorAll('.tabs .tab');
-    tabs.forEach(tab => tab.classList.remove('active'));
-
-    // 2. Click kiye gaye button par 'active' class lagayein
-    btn.classList.add('active');
-
-    // 3. Menu cards filter karein ('all' option ke sath)
-    const cards = document.querySelectorAll('#menuGrid .card');
-    cards.forEach(card => {
-        if (cat === 'all' || card.dataset.cat === cat) {
-            card.style.display = 'block';
-        } else {
-            card.style.display = 'none';
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Élite Café & Patisserie</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
         }
-    });
-}
+
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            color: #4a2c2a;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        /* Filter Tabs Styling */
+        .tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .tab {
+            padding: 10px 20px;
+            border: 2px solid #4a2c2a;
+            background-color: transparent;
+            color: #4a2c2a;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .tab.active, .tab:hover {
+            background-color: #4a2c2a;
+            color: #fff;
+        }
+
+        /* Menu Items Grid */
+        #menuGrid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+            border: 1px solid #eee;
+        }
+
+        .card h3 {
+            color: #4a2c2a;
+            margin-bottom: 8px;
+        }
+
+        .card p {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 12px;
+        }
+
+        .card .price {
+            font-weight: bold;
+            color: #d9534f;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>L'Élite Café & Patisserie</h1>
+        <p>Our Special Menu</p>
+    </header>
+
+    <!-- Category Filter Tabs -->
+    <div class="tabs">
+        <button class="tab active" onclick="filterMenu('all', this)">All</button>
+        <button class="tab" onclick="filterMenu('coffee', this)">Coffee</button>
+        <button class="tab" onclick="filterMenu('bakery', this)">Bakery</button>
+        <button class="tab" onclick="filterMenu('desserts', this)">Desserts</button>
+    </div>
+
+    <!-- Menu Grid -->
+    <div id="menuGrid">
+        <div class="card" data-cat="coffee">
+            <h3>Espresso</h3>
+            <p>Rich and bold single shot espresso</p>
+            <span class="price">$3.50</span>
+        </div>
+
+        <div class="card" data-cat="coffee">
+            <h3>Cappuccino</h3>
+            <p>Espresso with steamed milk foam</p>
+            <span class="price">$4.50</span>
+        </div>
+
+        <div class="card" data-cat="bakery">
+            <h3>Butter Croissant</h3>
+            <p>Freshly baked flaky butter croissant</p>
+            <span class="price">$3.00</span>
+        </div>
+
+        <div class="card" data-cat="desserts">
+            <h3>Chocolate Tarte</h3>
+            <p>Rich Belgian chocolate filling</p>
+            <span class="price">$5.50</span>
+        </div>
+    </div>
+
+    <!-- JavaScript Filtering Script -->
+    <script>
+        function filterMenu(cat, btn) {
+            // 1. Tamam tabs se 'active' class hatayein
+            const tabs = document.querySelectorAll(".tabs .tab");
+            tabs.forEach(tab => tab.classList.remove('active'));
+
+            // 2. Click me ke button par 'active' class lagayein
+            btn.classList.add('active');
+
+            // 3. Menu cards filter karein
+            const cards = document.querySelectorAll("#menuGrid .card");
+            cards.forEach(card => {
+                if (cat === 'all' || card.dataset.cat === cat) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
