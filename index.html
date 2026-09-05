@@ -1,60 +1,140 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#0b0a09">
-<title>L'Élite — Artisan Café & Bistro</title>
-<style>
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#0b0a09;color:#f7f3ea;font-family:Arial,Helvetica,sans-serif;line-height:1.6}a{text-decoration:none;color:inherit}.wrap{width:min(1120px,92%);margin:auto}
-header{position:sticky;top:0;z-index:20;background:rgba(11,10,9,.96);border-bottom:1px solid #29251b}.nav{height:78px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:14px;font-weight:800;letter-spacing:4px;font-size:22px}.logo{width:46px;height:46px;border:2px solid #d7b43a;border-radius:50%;display:grid;place-items:center;color:#d7b43a;font-family:Georgia,serif;font-size:25px}.links{display:flex;gap:24px;color:#ddd}.links a:hover{color:#d7b43a}.hamb{display:none;background:none;border:0;color:#d7b43a;font-size:30px}
-.hero{min-height:720px;display:grid;place-items:center;text-align:center;padding:90px 0;background:radial-gradient(circle at 50% 20%,#2a2414 0,#12100d 38%,#0b0a09 75%)}.eyebrow{color:#d7b43a;letter-spacing:5px;font-weight:800;font-size:14px}.hero h1{font:700 clamp(48px,8vw,94px)/.98 Georgia,serif;margin:22px 0}.gold{color:#d7b43a;font-style:italic}.hero p{max-width:720px;margin:28px auto;color:#c7c2b8;font-size:20px}.actions{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}.btn{padding:15px 28px;border-radius:999px;border:1px solid #d7b43a;font-weight:800}.primary{background:#d7b43a;color:#111}.secondary{color:#d7b43a}
-section{padding:90px 0;border-top:1px solid #29251b}.center{text-align:center}.title{font:700 clamp(42px,6vw,66px)/1.05 Georgia,serif;margin:12px 0 20px}.sub{color:#aaa39a;max-width:720px;margin:0 auto 38px;font-size:18px}
-.tabs{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:30px auto 45px}.tab{padding:13px 22px;border-radius:999px;border:1px solid #39352c;background:#0e0d0c;color:#c8c3ba;font-weight:700;cursor:pointer}.tab.active{background:#d7b43a;color:#111;border-color:#d7b43a}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.card{background:#151311;border:1px solid #302b21;border-radius:20px;overflow:hidden}.pic{height:210px;background:linear-gradient(135deg,#3b2c16,#17130d);display:grid;place-items:center;color:#d7b43a;font:700 42px Georgia}.cardbody{padding:22px}.card h3{font:700 25px Georgia;margin:0 0 8px}.price{float:right;color:#d7b43a}.muted{color:#9d9890}
-.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.tile{min-height:220px;border-radius:18px;background:linear-gradient(145deg,#3b2d18,#17130d);border:1px solid #302b21;display:grid;place-items:end;padding:18px;font-weight:700}
-.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.quote{background:#151311;border:1px solid #302b21;border-radius:18px;padding:25px}.stars{color:#d7b43a;letter-spacing:3px}
-.form{max-width:760px;margin:auto;display:grid;gap:14px}.form input,.form select,.form textarea{width:100%;padding:15px;background:#151311;border:1px solid #302b21;color:#f7f3ea;border-radius:8px;font-family:inherit;font-size:14px;box-sizing:border-box}.form textarea{resize:vertical;min-height:120px}
-   
-@media(max-width:480px){.gallery{grid-template-columns:1fr}.hero h1{font-size:52px}.eyebrow{font-size:12px;letter-spacing:4px}.title{font-size:46px}.sub{font-size:17px}.btn{width:100%}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0a09">
+  <title>L'Élite Artisan Café &amp; Bistro</title>
+  <style>
+    html{scroll-behavior:smooth}
+    body{margin:0;background:#0b0a09;color:#f7f3ea;font-family:Arial,Helvetica,sans-serif;line-height:1.6}
+    nav{position:sticky;top:0;z-index:20;background:rgba(11,10,9,.96);border-bottom:1px solid #29251b;height:78px;display:flex;align-items:center;justify-content:space-between;padding:0 20px}
+    .hero{display:grid;place-items:center;text-align:center;padding:90px 0;background:radial-gradient(circle at 50% 20%,#2a2414 0,#12100a 60%)}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .card{background:#151311;border:1px solid #302b21;border-radius:20px;overflow:hidden}
+    .wrap{max-width:1100px;margin:0 auto;padding:60px 20px}
+    .center{text-align:center}
+    .title{font:700 clamp(42px,6vw,66px)/1.05 Georgia,serif;margin:12px 0 20px}
+    .eyebrow{font-size:12px;letter-spacing:4px;color:#cba358;text-transform:uppercase}
+    .sub{color:#a39b8c;max-width:600px;margin:0 auto 30px}
+    .tabs{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:30px auto 45px}
+    .tab{padding:13px 22px;border-radius:999px;border:1px solid #302b21;background:#151311;color:#f7f3ea;cursor:pointer}
+    .tab.active{background:#cba358;color:#0b0a09;border-color:#cba358}
+    .tile{min-height:220px;border-radius:18px;background:linear-gradient(145deg,#3b2d1b,#12100a);display:flex;align-items:center;justify-content:center;font-size:48px}
+    .cardbody{padding:20px}
+    .price{color:#cba358;font-weight:700;float:right}
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .quote{background:#151311;border:1px solid #302b21;border-radius:18px;padding:25px}
+    footer{border-top:1px solid #29251b;padding:30px 20px;text-align:center;color:#8c8272;font-size:14px}
+    form input,form select,form textarea{width:100%;padding:15px;background:#151311;border:1px solid #302b21;border-radius:12px;color:#fff;margin-bottom:15px;box-sizing:border-box}
+    @media(max-width:768px){.grid,.gallery{grid-template-columns:1fr}.hero h1{font-size:52px}.eyebrow{font-size:12px;letter-spacing:4px}.title{font-size:46px}}
+  </style>
 </head>
 <body>
-<header><div class="wrap nav"><a class="brand" href="#home"><span class="logo">L</span><span>L'ÉLITE</span></a><nav class="links"><a href="#about">About</a><a href="#menu">Menu</a><a href="#gallery">Gallery</a><a href="#reviews">Reviews</a><a href="#location">Location</a><a href="#reserve">Book a Table</a></nav><button class="hamb" onclick="document.querySelector('.links').style.display=document.querySelector('.links').style.display==='flex'?'none':'flex'">☰</button></div></header>
 
-<main id="home">
-<section class="hero"><div class="wrap"><div class="eyebrow">ARTISANAL COFFEE &amp; GOURMET BISTRO</div><h1>Where Taste Meets<br><span class="gold">Timeless Elegance</span></h1><p>Hand-crafted single-origin brews, exquisite French pastries, and an atmosphere designed for memorable moments.</p><div class="actions"><a class="btn primary" href="#menu">Explore Menu</a><a class="btn secondary" href="#reserve">Reserve Table</a></div></div></section>
+  <nav>
+    <a class="brand" href="#home"><span class="logo">L</span><span>L'ÉLITE</span></a>
+    <div class="links">
+      <a href="#about">About</a>
+    </div>
+  </nav>
 
-<section id="about"><div class="wrap center"><div class="eyebrow">THE L'ÉLITE EXPERIENCE</div><h2 class="title">Crafted for the Discerning</h2><p class="sub">A refined café and bistro experience where exceptional coffee, French-inspired pastries and gourmet plates meet warm hospitality.</p></div></section>
+  <section class="hero" id="home">
+    <div class="wrap">
+      <div class="eyebrow">ARTISANAL COFFEE &amp; GOURMET BISTRO</div>
+      <h1>Where Taste Meets<br><span class="gold">Tranquility</span></h1>
+    </div>
+  </section>
 
-<section id="menu"><div class="wrap"><div class="center"><div class="eyebrow">CURATED SELECTION</div><h2 class="title">Artisan Menu</h2><p class="sub">A refined selection of coffee, breakfast delicacies, bistro plates and handcrafted desserts.</p></div>
-<div class="tabs"><button class="tab active" onclick="filterMenu('coffee',this)">Coffee &amp; Brews</button><button class="tab" onclick="filterMenu('bakery',this)">Bakery &amp; Pastry</button><button class="tab" onclick="filterMenu('brunch',this)">Gourmet Brunch</button><button class="tab" onclick="filterMenu('dessert',this)">Desserts</button></div>
-<div class="grid" id="menuGrid">
-<article class="card" data-cat="coffee"><div class="pic">☕</div><div class="cardbody"><span class="price">$12</span><h3>Gold Reserve Latte</h3><p class="muted">Velvety espresso, steamed milk and a delicate gold-dusted finish.</p></div></article>
-<article class="card" data-cat="coffee"><div class="pic">☕</div><div class="cardbody"><span class="price">$10</span><h3>Ethiopian Pour-Over</h3><p class="muted">Single-origin coffee with bright floral and citrus notes.</p></div></article>
-<article class="card" data-cat="coffee"><div class="pic">☕</div><div class="cardbody"><span class="price">$9</span><h3>Classic Flat White</h3><p class="muted">Rich double espresso balanced with silky microfoam.</p></div></article>
-<article class="card" data-cat="bakery" style="display:none"><div class="pic">🥐</div><div class="cardbody"><span class="price">$8</span><h3>Almond Croissant</h3><p class="muted">Buttery French pastry with toasted almonds and glaze.</p></div></article>
-<article class="card" data-cat="bakery" style="display:none"><div class="pic">🍞</div><div class="cardbody"><span class="price">$9</span><h3>Pistachio Brioche</h3><p class="muted">Soft brioche, pistachio cream and a light sugar finish.</p></div></article>
-<article class="card" data-cat="brunch" style="display:none"><div class="pic">🍳</div><div class="cardbody"><span class="price">$18</span><h3>Élite Breakfast</h3><p class="muted">Farm eggs, sourdough, roasted tomatoes and artisan greens.</p></div></article>
-<article class="card" data-cat="brunch" style="display:none"><div class="pic">🥑</div><div class="cardbody"><span class="price">$16</span><h3>Avocado Tartine</h3><p class="muted">Sourdough, avocado, poached egg and herbs.</p></div></article>
-<article class="card" data-cat="dessert" style="display:none"><div class="pic">🍰</div><div class="cardbody"><span class="price">$11</span><h3>Parisian Chocolate Tart</h3><p class="muted">Dark chocolate ganache, crisp pastry and sea salt.</p></div></article>
-</div></div></section>
+  <section class="wrap center" id="about">
+    <div class="eyebrow">THE L'ÉLITE EXPERIENCE</div>
+    <h2 class="title">Crafted for the Discerning</h2>
+  </section>
 
-<section id="gallery"><div class="wrap center"><div class="eyebrow">VISUAL ATMOSPHERE</div><h2 class="title">Moments at L'Élite</h2><p class="sub">A warm, intimate setting designed for coffee dates, quiet mornings and memorable dinners.</p><div class="gallery"><div class="tile">Artisan Coffee Bar</div><div class="tile">French Patisserie</div><div class="tile">Elegant Dining</div><div class="tile">Golden Evenings</div><div class="tile">Freshly Baked</div><div class="tile">L'Élite Moments</div></div></div></section>
+  <section class="wrap">
+    <div class="center">
+      <div class="eyebrow">CURATED SELECTION</div>
+      <h2 class="title">Artisan Menu</h2>
+      <p class="sub">Handcrafted beverages and delicious light bites.</p>
+      <div class="tabs">
+        <button class="tab active" onclick="filterMenu('coffee',this)">Coffee &amp; Brews</button>
+        <button class="tab" onclick="filterMenu('bakery',this)">Bakery</button>
+        <button class="tab" onclick="filterMenu('brunch',this)">Brunch</button>
+        <button class="tab" onclick="filterMenu('dessert',this)">Desserts</button>
+      </div>
+    </div>
 
-<section id="reviews"><div class="wrap center"><div class="eyebrow">GUEST NOTES</div><h2 class="title">What Guests Say</h2><div class="reviews"><div class="quote"><div class="stars">★★★★★</div><p>“Beautiful atmosphere and exceptional coffee. The whole experience feels special.”</p><strong>— Aisha K.</strong></div><div class="quote"><div class="stars">★★★★★</div><p>“The pastries are outstanding and the service is warm and polished.”</p><strong>— Hamza R.</strong></div><div class="quote"><div class="stars">★★★★★</div><p>“A perfect place for a relaxed brunch or an elegant evening.”</p><strong>— Sara M.</strong></div></div></div></section>
+    <div class="grid" id="menuGrid">
+      <div class="card" data-cat="coffee">
+        <div class="pic">☕</div>
+        <div class="cardbody"><span class="price">$12</span><h3>Gold Reserve Latte</h3><p>Espresso with edible gold leaf.</p></div>
+      </div>
+      <div class="card" data-cat="coffee">
+        <div class="pic">☕</div>
+        <div class="cardbody"><span class="price">$10</span><h3>Ethiopian Pour-Over</h3><p>Single origin floral notes.</p></div>
+      </div>
+      <div class="card" data-cat="coffee">
+        <div class="pic">☕</div>
+        <div class="cardbody"><span class="price">$9</span><h3>Classic Flat White</h3><p>Velvety steamed milk.</p></div>
+      </div>
+      <div class="card" data-cat="bakery" style="display:none">
+        <div class="pic">🥐</div>
+        <div class="cardbody"><span class="price">$8</span><h3>Almond Croissant</h3><p>Freshly baked daily.</p></div>
+      </div>
+      <div class="card" data-cat="bakery" style="display:none">
+        <div class="pic">🥐</div>
+        <div class="cardbody"><span class="price">$9</span><h3>Pistachio Danish</h3><p>Rich buttery layers.</p></div>
+      </div>
+      <div class="card" data-cat="brunch" style="display:none">
+        <div class="pic">🥑</div>
+        <div class="cardbody"><span class="price">$18</span><h3>Élite Truffle Toast</h3><p>Avocado &amp; poached egg.</p></div>
+      </div>
+      <div class="card" data-cat="brunch" style="display:none">
+        <div class="pic">🥐</div>
+        <div class="cardbody"><span class="price">$16</span><h3>Avocado Croissant</h3><p>Savory breakfast sandwich.</p></div>
+      </div>
+      <div class="card" data-cat="dessert" style="display:none">
+        <div class="pic">🍰</div>
+        <div class="cardbody"><span class="price">$11</span><h3>Parisian Tarte</h3><p>Dark chocolate ganache.</p></div>
+      </div>
+    </div>
+  </section>
 
-<section id="reserve"><div class="wrap center"><div class="eyebrow">YOUR TABLE AWAITS</div><h2 class="title">Reserve a Table</h2><p class="sub">Send your preferred date and time. We'll confirm your reservation.</p><form class="form" onsubmit="event.preventDefault();alert('Thank you! Your reservation request has been received.');"><input required placeholder="Your name"><input required type="tel" placeholder="Phone number"><input required type="date"><select required><option value="">Choose time</option><option>10:00 AM</option><option>12:00 PM</option><option>2:00 PM</option><option>6:00 PM</option><option>8:00 PM</option></select><textarea rows="4" placeholder="Special request (optional)"></textarea><button class="btn primary" type="submit">Request Reservation</button></form></div></section>
+  <section class="wrap center">
+    <div class="eyebrow">VISUAL ATMOSPHERE</div>
+    <h2 class="title">Moments at L'Élite</h2>
+  </section>
 
-<section id="location"><div class="wrap center"><div class="eyebrow">VISIT L'ÉLITE</div><h2 class="title">Lahore, Pakistan</h2><p class="sub">Open daily for coffee, brunch, pastries and evening dining. Call or WhatsApp to confirm today's hours.</p><div class="actions"><a class="btn primary" href="https://wa.me/923001234567">WhatsApp Us</a><a class="btn secondary" href="tel:+923001234567">Call Us</a></div></div></section>
-</main>
-<footer><div class="wrap">© 2026 L'Élite Artisan Café &amp; Bistro — Crafted with taste.</div></footer>
-   <a href="https://wa.me/923134520974" target="_blank" style="color:#25D366;font-weight:bold;">🟢 WhatsApp</a>
-<script>
-function filterMenu(cat,btn){
- document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active')); btn.classList.add('active');
- document.querySelectorAll('#menuGrid .card').forEach(c=>c.style.display=c.dataset.cat===cat?'block':'none');
-}
-</script>
+  <section class="wrap center">
+    <div class="eyebrow">GUEST NOTES</div>
+    <h2 class="title">What Guests Say</h2>
+  </section>
+
+  <section class="wrap center">
+    <div class="eyebrow">YOUR TABLE AWAITS</div>
+    <h2 class="title">Reserve a Table</h2>
+  </section>
+
+  <footer class="wrap center">
+    <div class="eyebrow">VISIT L'ÉLITE</div>
+    <h2 class="title">Lahore, Pakistan</h2>
+    <p class="sub">Open daily from 8 AM to 11 PM.</p>
+    <div>
+      &copy; 2026 L'Élite Artisan Café &amp; Bistro. All rights reserved.<br>
+      <a href="https://wa.me/923134520974" target="_blank" style="color:#25D366;font-weight:bold;">💬 WhatsApp</a>
+    </div>
+  </footer>
+
+  <script>
+    function filterMenu(cat, btn) {
+      document.querySelectorAll('.tab').forEach(x => x.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('#menuGrid .card').forEach(c => {
+        c.style.display = (c.dataset.cat === cat) ? 'block' : 'none';
+      });
+    }
+  </script>
+
 </body>
 </html>
