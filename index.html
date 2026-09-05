@@ -1,20 +1,18 @@
-<script>
 function filterMenu(cat, btn) {
-    // 1. Sabhi tabs se 'active' class remove karna
+    // 1. Tamam tabs se 'active' class hatayein
     const tabs = document.querySelectorAll('.tabs .tab');
     tabs.forEach(tab => tab.classList.remove('active'));
 
-    // 2. Click kiye gaye tab par 'active' class add karna
+    // 2. Click kiye gaye button par 'active' class lagayein
     btn.classList.add('active');
 
-    // 3. Category ke mutabiq menu items filter karna
+    // 3. Menu cards filter karein ('all' option ke sath)
     const cards = document.querySelectorAll('#menuGrid .card');
     cards.forEach(card => {
-        if (card.dataset.cat === cat) {
+        if (cat === 'all' || card.dataset.cat === cat) {
             card.style.display = 'block';
         } else {
             card.style.display = 'none';
         }
     });
 }
-</script>
